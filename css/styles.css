@@ -208,6 +208,23 @@ img {
   letter-spacing: 0.05em;
   color: var(--accent);
   margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: auto;
+  transition: transform var(--transition), filter var(--transition);
+}
+
+.sidebar-logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.sidebar-logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
 .sidebar-nav {
@@ -916,6 +933,8 @@ body.sidebar-open .menu-toggle span:nth-child(3) {
   }
   
   .service-card {
+    min-width: 100%;
+    flex: 0 0 100%;
     padding: 2rem 1.5rem;
   }
 }
